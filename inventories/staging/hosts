@@ -1,17 +1,13 @@
  
 [ambariserver]
-eu-west-2a-master2.tsansible.local ansible_ssh_host=172.30.128.152
+eu-west-2a-master1.tsansible.local ansible_ssh_host=172.30.128.232
 [masternodes]
  
-eu-west-2a-master2.tsansible.local ansible_ssh_host=172.30.128.152
-eu-west-2a-master1.tsansible.local ansible_ssh_host=172.30.128.166
-eu-west-2b-master1.tsansible.local ansible_ssh_host=172.30.254.203
+eu-west-2a-master1.tsansible.local ansible_ssh_host=172.30.128.232
+eu-west-2b-master1.tsansible.local ansible_ssh_host=172.30.254.67
+eu-west-2a-master2.tsansible.local ansible_ssh_host=172.30.128.223
 [datanodes]
-eu-west-2b-datanode1.tsansible.local ansible_ssh_host=172.30.254.169
-eu-west-2a-datanode1.tsansible.local ansible_ssh_host=172.30.128.148
- 
-eu-west-2a-master2.tsansible.local ansible_ssh_host=172.30.128.152
-eu-west-2a-master1.tsansible.local ansible_ssh_host=172.30.128.166
-eu-west-2b-master1.tsansible.local ansible_ssh_host=172.30.254.203
+eu-west-2a-datanode1.tsansible.local ansible_ssh_host=172.30.128.209
+eu-west-2b-datanode1.tsansible.local ansible_ssh_host=172.30.254.40
 [all:vars]
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'

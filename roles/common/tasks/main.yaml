@@ -36,4 +36,20 @@
 - name: clean up
   command: 'rm -f jdk-{{ var_java_ver }}-linux-x64.rpm'
 
+- name: Create java folder
+  shell: 'sudo mkdir -p /usr/share/java/'
+
+- name: Download MySQL JDBC Connector
+  get_url:
+    url: "{{ mysql_connector_java_url }}"
+    dest: "/tmp/{{ mysql_connector_java_archive }}"
+
+- name: Unarchive MySQL JDBC Connector package
+  shell: |
+    TMP_DIR=`mktemp -d`
+    tar zxvf /tmp/{{ mysql_connector_java_archive }} -C $TMP_DIR --strip-components=1
+    sudo cp $TMP_DIR/mysql-connector-java-*-bin.jar /usr/share/java/mysql-connector-java.jar
+    sudo chmod 755 /usr/share/java/mysql-connector-java.jar
+   
+
     

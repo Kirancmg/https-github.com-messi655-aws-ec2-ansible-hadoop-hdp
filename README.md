@@ -1,5 +1,5 @@
 - This Ansible Playbook will help you create a `AWS EC2 Infrastructure` and setup `Hadoop Cluster` use [HDP](https://hortonworks.com/products/data-platforms/hdp/)
-- The AWS EC2 must be Centos distros 
+- The AWS EC2 must be Centos distro 
 
 # 1. Create a AWS Infrastructure
 

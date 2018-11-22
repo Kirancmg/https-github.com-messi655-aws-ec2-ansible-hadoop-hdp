@@ -1,7 +1,7 @@
 ---
 #========== AWS Setting
 region: eu-west-2
-vpc_name: tinhuynh
+vpc_name: messi655
 key_name: hadoop_testing
 image_name: ami-031b0f67 # CentOS 7
 cleanup_cloud: true
@@ -36,13 +36,16 @@ remote_user: centos
 var_java_ver: 8u131
 var_java_build: b11
 
-var_ambari_server: 172.30.128.152
+var_ambari_server: 172.30.128.232
 var_ambari_user: admin
 var_ambari_password: admin
 
 # The Ambari version you want to deploy 
 var_ambari_version: http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.2.2/ambari.repo #https://docs.hortonworks.com/
+
+mysql_connector_java_archive: mysql-connector-java-5.1.47.tar.gz
+mysql_connector_java_url: https://dev.mysql.com/get/Downloads/Connector-J/{{ mysql_connector_java_archive }}
 #========== Bastion host
-bastion_ip: 15.18.119.96
+bastion_ip: 35.176.101.99
 user: centos
 ansible_ssh_common_args: '-o ProxyCommand="ssh -i {{ private_key }} -W %h:%p -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no {{ user }}@{{ bastion_ip }}"'
