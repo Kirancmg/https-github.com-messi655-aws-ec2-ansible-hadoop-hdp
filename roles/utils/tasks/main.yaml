@@ -21,6 +21,8 @@
   command: /etc/init.d/ambari-server status
   ignore_errors: yes
   register: service_status
+- name: Copy mysql java connector to Ambari lib
+  shell: 'sudo cp /usr/share/java/mysql-connector-java.jar /var/lib/ambari-server/resources/'
 - name: Stop Ambari server
   command: /etc/init.d/ambari-server stop
   when: "service_status.rc == 0"
