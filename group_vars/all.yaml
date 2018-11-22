@@ -7,10 +7,10 @@ image_name: ami-031b0f67 # CentOS 7
 cleanup_cloud: true
 dns_zone: ansible.local
 ttl: 60
-public_volume_size: 30
-private_volume_size: 50
+public_volume_size: 100
+private_volume_size: 100
 public_instance_type: t2.micro
-private_instance_type: t2.medium
+private_instance_type: t2.xlarge
 cidr_block: 172.30.0.0/16
 cidr_pub_1: 172.30.16.0/20
 cidr_pub_2: 172.30.32.0/20
